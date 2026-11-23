@@ -1,0 +1,608 @@
+{
+ "_comment": "Held-out set 2 for drugarg 0.9.4. Built mechanically from two published expert lists by the rules in PROTOCOL.md, before any of these queries was run. 'expect' paraphrases the source; it is not ground truth for drugs the source does not name.",
+ "queries": [
+  {
+   "id": "heldout2/p01",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "1 amphetamines + MAOI",
+   "disease_text": [
+    "attention deficit hyperactivity disorder"
+   ],
+   "comed": [
+    "tranylcypromine"
+   ],
+   "expect": "amphetamine-class candidates (methylphenidate, dexmethylphenidate, dextroamphetamine, lisdexamfetamine, amphetamine, atomoxetine) should be rejected: contraindicated with MAOIs"
+  },
+  {
+   "id": "heldout2/p02",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "2 atazanavir + PPIs",
+   "disease_text": [
+    "HIV infectious disease"
+   ],
+   "comed": [
+    "omeprazole"
+   ],
+   "expect": "atazanavir should be rejected: contraindicated with PPIs"
+  },
+  {
+   "id": "heldout2/p04",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "4 SSRIs + MAOI; 7 TCAs + MAOI (identical query, merged)",
+   "disease_text": [
+    "depressive disorder"
+   ],
+   "comed": [
+    "tranylcypromine"
+   ],
+   "expect": "SSRIs/serotonergic agents (fluoxetine, paroxetine, citalopram, escitalopram, sertraline, fluvoxamine, duloxetine, venlafaxine, desvenlafaxine) and tricyclic antidepressants should be rejected: contraindicated with MAOIs"
+  },
+  {
+   "id": "heldout2/p05",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "5 irinotecan + CYP3A4 inhibitors",
+   "disease_text": [
+    "colorectal"
+   ],
+   "comed": [
+    "ritonavir"
+   ],
+   "expect": "irinotecan should be rejected: contraindicated with strong CYP3A4 inhibitors"
+  },
+  {
+   "id": "heldout2/p06",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "6 narcotic analgesics + MAOI",
+   "disease_text": [
+    "pain"
+   ],
+   "comed": [
+    "tranylcypromine"
+   ],
+   "expect": "meperidine, methadone, tapentadol, fentanyl and tramadol should be rejected: contraindicated with MAOIs",
+   "not_testable": "PrimeKG's only 'pain' node is myofascial pain syndrome (not the indication of opioids)"
+  },
+  {
+   "id": "heldout2/p09",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "9 ramelteon + CYP1A2 inhibitors",
+   "disease_text": [
+    "insomnia"
+   ],
+   "comed": [
+    "fluvoxamine"
+   ],
+   "expect": "ramelteon should be rejected: contraindicated with CYP1A2 inhibitors"
+  },
+  {
+   "id": "heldout2/p10",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "10 strong CYP3A4 inducers + protease inhibitors",
+   "disease_text": [
+    "pulmonary arterial hypertension"
+   ],
+   "comed": [
+    "ritonavir"
+   ],
+   "expect": "bosentan should be rejected: contraindicated with protease inhibitors"
+  },
+  {
+   "id": "heldout2/p11",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "11 simvastatin/lovastatin + CYP3A4 inhibitors",
+   "disease_text": [
+    "hypercholesterolemia"
+   ],
+   "comed": [
+    "ritonavir"
+   ],
+   "expect": "simvastatin and lovastatin should be rejected: contraindicated with CYP3A4 inhibitors"
+  },
+  {
+   "id": "heldout2/p12",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "12 CYP3A4 inhibitors + ergot alkaloids",
+   "disease_text": [
+    "HIV infectious disease"
+   ],
+   "comed": [
+    "ergotamine"
+   ],
+   "expect": "protease inhibitors (ritonavir, nelfinavir, atazanavir, indinavir, saquinavir, darunavir, lopinavir, tipranavir, fosamprenavir) should be rejected: contraindicated with ergot alkaloids"
+  },
+  {
+   "id": "heldout2/p13",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "13 tizanidine + CYP1A2 inhibitors",
+   "disease_text": [
+    "spasticity"
+   ],
+   "comed": [
+    "ciprofloxacin"
+   ],
+   "expect": "tizanidine should be rejected: contraindicated with CYP1A2 inhibitors",
+   "not_testable": "no PrimeKG node for spasticity itself; the only matches are two X-linked genetic syndromes"
+  },
+  {
+   "id": "heldout2/p14",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "14 tranylcypromine + procarbazine",
+   "disease_text": [
+    "depressive disorder"
+   ],
+   "comed": [
+    "procarbazine"
+   ],
+   "expect": "tranylcypromine should be rejected: contraindicated with procarbazine"
+  },
+  {
+   "id": "heldout2/p15",
+   "source": "Phansalkar 2012 (JAMIA 19:735), Table 2",
+   "source_row": "15 triptans + MAOI",
+   "disease_text": [
+    "migraine"
+   ],
+   "comed": [
+    "tranylcypromine"
+   ],
+   "expect": "sumatriptan, zolmitriptan and rizatriptan should be rejected: contraindicated with MAOIs"
+  },
+  {
+   "id": "heldout2/b5-01",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "RAS inhibitor + another RAS inhibitor or K-sparing diuretic, CKD",
+   "disease_text": [
+    "hypertension"
+   ],
+   "comed": [
+    "benazepril"
+   ],
+   "patient_disease": [
+    "chronic kidney disease"
+   ],
+   "expect": "other ACE inhibitors, ARBs, ARNIs, aliskiren, amiloride and triamterene should be rejected or flagged (hyperkalaemia; avoid routine use with CKD stage 3a or worse)"
+  },
+  {
+   "id": "heldout2/b5-02",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "opioids + benzodiazepines",
+   "disease_text": [
+    "pain"
+   ],
+   "comed": [
+    "alprazolam"
+   ],
+   "expect": "opioids should be rejected (overdose risk; avoid)",
+   "not_testable": "PrimeKG's only 'pain' node is myofascial pain syndrome (not the indication of opioids)"
+  },
+  {
+   "id": "heldout2/b5-03",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "opioids + gabapentinoids",
+   "disease_text": [
+    "pain"
+   ],
+   "comed": [
+    "gabapentin"
+   ],
+   "expect": "opioids should be rejected or flagged (sedation, respiratory depression; avoid, with exceptions)",
+   "not_testable": "PrimeKG's only 'pain' node is myofascial pain syndrome (not the indication of opioids)"
+  },
+  {
+   "id": "heldout2/b5-06",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "lithium + ACEi/ARB/ARNI",
+   "disease_text": [
+    "bipolar disorder"
+   ],
+   "comed": [
+    "benazepril"
+   ],
+   "expect": "lithium should be rejected or accepted only with lithium-level monitoring (avoid or monitor)"
+  },
+  {
+   "id": "heldout2/b5-07",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "lithium + loop diuretics",
+   "disease_text": [
+    "bipolar disorder"
+   ],
+   "comed": [
+    "bumetanide"
+   ],
+   "expect": "lithium should be rejected or accepted only with lithium-level monitoring (avoid or monitor)"
+  },
+  {
+   "id": "heldout2/b5-09",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "phenytoin + trimethoprim-sulfamethoxazole",
+   "disease_text": [
+    "epilepsy"
+   ],
+   "comed": [
+    "sulfamethoxazole",
+    "trimethoprim"
+   ],
+   "expect": "phenytoin should be rejected (toxicity; avoid)"
+  },
+  {
+   "id": "heldout2/b5-10",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "theophylline + cimetidine",
+   "disease_text": [
+    "asthma"
+   ],
+   "comed": [
+    "cimetidine"
+   ],
+   "expect": "theophylline should be rejected (toxicity; avoid)"
+  },
+  {
+   "id": "heldout2/b5-11",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "theophylline + ciprofloxacin",
+   "disease_text": [
+    "asthma"
+   ],
+   "comed": [
+    "ciprofloxacin"
+   ],
+   "expect": "theophylline should be rejected (toxicity; avoid)"
+  },
+  {
+   "id": "heldout2/b5-12a",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "warfarin + amiodarone",
+   "disease_text": [
+    "thrombotic disease"
+   ],
+   "comed": [
+    "amiodarone"
+   ],
+   "expect": "warfarin should be rejected or accepted only with INR monitoring (avoid when possible)"
+  },
+  {
+   "id": "heldout2/b5-12b",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "warfarin + ciprofloxacin",
+   "disease_text": [
+    "thrombotic disease"
+   ],
+   "comed": [
+    "ciprofloxacin"
+   ],
+   "expect": "warfarin should be rejected or accepted only with INR monitoring (avoid when possible)"
+  },
+  {
+   "id": "heldout2/b5-12c",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "warfarin + macrolides (not azithromycin)",
+   "disease_text": [
+    "thrombotic disease"
+   ],
+   "comed": [
+    "clarithromycin"
+   ],
+   "expect": "warfarin should be rejected or accepted only with INR monitoring (avoid when possible)"
+  },
+  {
+   "id": "heldout2/b5-12d",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "warfarin + trimethoprim-sulfamethoxazole",
+   "disease_text": [
+    "thrombotic disease"
+   ],
+   "comed": [
+    "sulfamethoxazole",
+    "trimethoprim"
+   ],
+   "expect": "warfarin should be rejected or accepted only with INR monitoring (avoid when possible)"
+  },
+  {
+   "id": "heldout2/b5-12e",
+   "source": "AGS Beers 2023, Table 5",
+   "source_row": "warfarin + SSRIs",
+   "disease_text": [
+    "thrombotic disease"
+   ],
+   "comed": [
+    "citalopram"
+   ],
+   "expect": "warfarin should be rejected or accepted only with INR monitoring (avoid when possible)"
+  },
+  {
+   "id": "heldout2/b3-hf1",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: cilostazol",
+   "disease_text": [
+    "intermittent vascular claudication"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "cilostazol should be rejected (avoid in heart failure)"
+  },
+  {
+   "id": "heldout2/b3-hf2",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: dextromethorphan-quinidine",
+   "disease_text": [
+    "pseudobulbar affect"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "dextromethorphan/quinidine should be rejected (avoid in heart failure)",
+   "not_testable": "no PrimeKG disease node for pseudobulbar affect"
+  },
+  {
+   "id": "heldout2/b3-hf3",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: diltiazem, verapamil",
+   "disease_text": [
+    "hypertension"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "diltiazem and verapamil should be rejected (avoid in HFrEF)"
+  },
+  {
+   "id": "heldout2/b3-hf4",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: dronedarone",
+   "disease_text": [
+    "atrial fibrillation"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "dronedarone should be rejected or flagged (avoid if symptomatic heart failure)"
+  },
+  {
+   "id": "heldout2/b3-hf5",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: NSAIDs and COX-2 inhibitors",
+   "disease_text": [
+    "osteoarthritis"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "NSAIDs and COX-2 inhibitors should be rejected or flagged (avoid if symptomatic heart failure)",
+   "near_duplicate_of_dev": "osteoarthritis/warfarin/hf"
+  },
+  {
+   "id": "heldout2/b3-hf6",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "heart failure: thiazolidinediones",
+   "disease_text": [
+    "type 2 diabetes mellitus"
+   ],
+   "patient_condition": [
+    "c_hf"
+   ],
+   "patient_disease": [
+    "heart failure"
+   ],
+   "expect": "pioglitazone and rosiglitazone should be rejected or flagged (avoid if symptomatic heart failure)"
+  },
+  {
+   "id": "heldout2/b3-sy1",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "syncope: antipsychotics",
+   "disease_text": [
+    "schizophrenia"
+   ],
+   "patient_disease": [
+    "syncope"
+   ],
+   "expect": "antipsychotics (e.g. chlorpromazine, olanzapine) should be flagged (avoid if syncope may be orthostatic)",
+   "not_testable": "no PrimeKG disease node for syncope"
+  },
+  {
+   "id": "heldout2/b3-sy2",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "syncope: cholinesterase inhibitors",
+   "disease_text": [
+    "Alzheimer disease"
+   ],
+   "patient_disease": [
+    "syncope"
+   ],
+   "expect": "donepezil, galantamine and rivastigmine should be rejected or flagged (avoid)",
+   "not_testable": "no PrimeKG disease node for syncope"
+  },
+  {
+   "id": "heldout2/b3-sy3",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "syncope: non-selective alpha-1 blockers",
+   "disease_text": [
+    "benign prostatic hyperplasia"
+   ],
+   "patient_disease": [
+    "syncope"
+   ],
+   "expect": "doxazosin, prazosin and terazosin should be flagged (avoid if syncope may be orthostatic)",
+   "not_testable": "no PrimeKG disease node for syncope"
+  },
+  {
+   "id": "heldout2/b3-sy4",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "syncope: tertiary TCAs",
+   "disease_text": [
+    "depressive disorder"
+   ],
+   "patient_disease": [
+    "syncope"
+   ],
+   "expect": "amitriptyline, clomipramine, doxepin and imipramine should be rejected or flagged (avoid)",
+   "not_testable": "no PrimeKG disease node for syncope"
+  },
+  {
+   "id": "heldout2/b3-de2",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: antipsychotics",
+   "disease_text": [
+    "schizophrenia"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "antipsychotics should be flagged (avoid, except after non-drug options fail)"
+  },
+  {
+   "id": "heldout2/b3-de3",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: benzodiazepines",
+   "disease_text": [
+    "anxiety disorder"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "benzodiazepines should be rejected or flagged (avoid)"
+  },
+  {
+   "id": "heldout2/b3-de4",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: corticosteroids",
+   "disease_text": [
+    "rheumatoid arthritis"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "oral/parenteral corticosteroids should be flagged (avoid; lowest dose, shortest time if needed)"
+  },
+  {
+   "id": "heldout2/b3-de5",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: H2-receptor antagonists",
+   "disease_text": [
+    "gastroesophageal reflux disease"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "cimetidine, famotidine and nizatidine should be rejected or flagged (avoid)"
+  },
+  {
+   "id": "heldout2/b3-de6",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: Z-drugs",
+   "disease_text": [
+    "insomnia"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "eszopiclone, zaleplon and zolpidem should be rejected or flagged (avoid)"
+  },
+  {
+   "id": "heldout2/b3-de7",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "delirium: opioids",
+   "disease_text": [
+    "pain"
+   ],
+   "patient_disease": [
+    "delirium"
+   ],
+   "expect": "opioids should be flagged (avoid; multimodal pain management)",
+   "not_testable": "PrimeKG's only 'pain' node is myofascial pain syndrome (not the indication of opioids)"
+  },
+  {
+   "id": "heldout2/b3-dm2",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "dementia: antipsychotics",
+   "disease_text": [
+    "schizophrenia"
+   ],
+   "patient_disease": [
+    "dementia"
+   ],
+   "expect": "antipsychotics should be flagged (avoid, except after non-drug options fail)"
+  },
+  {
+   "id": "heldout2/b3-dm3",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "dementia: benzodiazepines",
+   "disease_text": [
+    "anxiety disorder"
+   ],
+   "patient_disease": [
+    "dementia"
+   ],
+   "expect": "benzodiazepines should be rejected or flagged (avoid)"
+  },
+  {
+   "id": "heldout2/b3-dm4",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "dementia: Z-drugs",
+   "disease_text": [
+    "insomnia"
+   ],
+   "patient_disease": [
+    "dementia"
+   ],
+   "expect": "eszopiclone, zaleplon and zolpidem should be rejected or flagged (avoid)"
+  },
+  {
+   "id": "heldout2/b3-pd1",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "Parkinson disease: antiemetics",
+   "disease_text": [
+    "nausea"
+   ],
+   "patient_disease": [
+    "Parkinson disease"
+   ],
+   "expect": "metoclopramide, prochlorperazine and promethazine should be rejected (avoid)",
+   "not_testable": "no PrimeKG disease node for nausea or vomiting"
+  },
+  {
+   "id": "heldout2/b3-pd2",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "Parkinson disease: antipsychotics",
+   "disease_text": [
+    "schizophrenia"
+   ],
+   "patient_disease": [
+    "Parkinson disease"
+   ],
+   "expect": "antipsychotics except clozapine, pimavanserin and quetiapine should be rejected (avoid); those three should stay acceptable"
+  },
+  {
+   "id": "heldout2/b3-ul1",
+   "source": "AGS Beers 2023, Table 3",
+   "source_row": "gastric/duodenal ulcer history: aspirin, non-COX-2 NSAIDs",
+   "disease_text": [
+    "osteoarthritis"
+   ],
+   "patient_condition": [
+    "c_ulcerhx"
+   ],
+   "patient_disease": [
+    "peptic ulcer disease"
+   ],
+   "expect": "aspirin and non-selective NSAIDs should be rejected, or accepted only with a PPI/misoprostol (avoid unless alternatives ineffective and gastroprotection used)",
+   "near_duplicate_of_dev": "stress/osteoarthritis/warfarin/ulcer"
+  }
+ ]
+}
